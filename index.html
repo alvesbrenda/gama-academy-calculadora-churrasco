@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./src/main.css" />
     <title>Gama Academy - Calculadora de churrasco</title>
-  </head>
-  <body>
-    <header>
-      <h5>GAMA ACADEMY</h5>
-      <h2>Calculadora de Churrasco</h2>
-    </header>
+</head>
 
-    <div>
-      <label for="mulheres-qnt">Mulheres</label>
-      <input id="mulheres-qnt" type="text" />
+<body class="container">
+    <div class="container-meio">
+        <header class="header">
+            <h5>GAMA ACADEMY</h5>
+            <div class=titulo>
+                <h2>Calculadora de Churrasco</h2>
+            </div>
+        </header>
+        <div class="d-flex flex-column">
+            <div class="d-flex justify-content-around">
+                <div class="col-md-2">Comidas</div>
+                <div class="d-flex align-items-start flex-column">
+                    <input class="ipt " id="mulheres-qnt " type="text " style="width: 125px; height: 55px; " />
 
-      <label for="homens-qnt">Homens</label>
-      <input id="homens-qnt" type="text" />
+                    <label class="txt" for="mulheres-qnt ">Mulheres</label>
+                    <div>
+                        <input id="acompanhamentos " type="checkbox " style="width: 10px; height: 10px; " />
+                        <label class="txt" for="acompanhamentos ">Acompanhamentos</label>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <input id="homens-qnt " type="text " style="width: 125px; height: 55px" />
+                    <br>
+                    <label class="txt" for="homens-qnt ">Homens</label>
+                </div>
+                <div class="col-md-3 ">
+                    <input id="criancas-qnt" type="text " style="width: 125px; height: 55px;" />
+                    <br>
+                    <label class="txt" for="criancas-qnt ">Crianças</label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-around ">
+            <div class="col-md-2">Bebidas</div>
+            <div class="col-md-3">
+                <input id="bebidas-alcoolicas" type="text" style="width: 125px; height: 55px; " />
+                <br>
+                <label class="txt" for="bebidas-alcoolicas">Quantos bebem cerveja?</label>
+            </div>
+            <div class="col-md-3 ">
+                <input id="bebidas-nao-alcoolicas " type="text " style="width: 125px; height: 55px; " />
+                <br>
+                <label class="txt" for="bebidas-nao-alcoolicas ">Quantos bebem refrigerante?</label>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center ">
+            <button class="btn-calc " id="botaoCalcular ">Calcular</button>
+        </div>
 
-      <label for="criancas-qnt">Crianças</label>
-      <input id="criancas-qnt" type="text" />
-      <br>
-      <label for="acompanhamentos">acompanhamentos</label>
-      <input id="acompanhamentos" type="checkbox" />
+        <div class="content-final justify-center ipt-final col-md-8">
+            <div>
+                <label for="total-carne " id="total-carne "></label>
+            </div>
+            <div>
+                <label for="total-pessoas " id="total-pessoas "></label>
+            </div>
+            <div>
+                <label for="total-acompanhamento " id="total-acompanhamento "></label>
+            </div>
+            <div>
+                <label for="total-bebidas-nao-alcoolicas " id="total-bebidas-nao-alcoolicas "></label>
+            </div>
+            <div>
+                <label for="total-bebidas-alcoolicas " id="total-bebidas-alcoolicas "></label>
+            </div>
+        </div>
     </div>
-    <div>
-      <label for="bebidas-alcoolicas">Bebidas alcoolicas</label>
-      <input id="bebidas-alcoolicas" type="text" />
-
-      <label for="bebidas-nao-alcoolicas">Bebidas não alcoolicas</label>
-      <input id="bebidas-nao-alcoolicas" type="text" />
     </div>
-    <br>
-    <button id="botaoCalcular">Calcular</button>
 
-      <div>
-        <div>
-          <label for="total-carne" id="total-carne"></label>
-        </div>
-        <div>
-          <label for="total-pessoas" id="total-pessoas"></label>
-        </div>
-        <div>
-          <label for="total-acompanhamento" id="total-acompanhamento"></label>
-        </div>
-        <div>
-          <label for="total-bebidas-nao-alcoolicas" id="total-bebidas-nao-alcoolicas"></label>
-        </div>
-        <div>
-          <label for="total-bebidas-alcoolicas" id="total-bebidas-alcoolicas"></label>
-        </div>
-        <div>
-      </div>
-    </div>
-    <script src="./src/main.js"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="./src/main.js "></script>
+</body>
+
 </html>
